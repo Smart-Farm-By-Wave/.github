@@ -151,5 +151,6 @@
 * Setup configuration ของ Collection และ Data Model ของ MongoDB
 * ติดต่อกับ Hardware ด้วย MQTT server เพื่อรับข้อมูลลงไปเก็บใน MongoDB Database ด้วย Library Mongoose และสั่งการรดน้ำ
 * ติดต่อกับ Frontend ด้วย HTTP Server เพื่อส่งข้อมูลในการแสดงผล และรับการตั้งค่าการเปิดปิดการใช้งานแต่ละแปลงจาก Frontend
+
 **รายละเอียด Hardware**
 * [Schematics](https://smart-farm-by-wave-schematics.tiiny.site/)
