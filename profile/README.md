@@ -1,6 +1,7 @@
 ## **ความเป็นมาของโครงงาน**   
 
 <h4>เนื่องจากผู้ปกครองของนิสิตในกลุ่มมีอาชีพเสริมคือการทำสวน นิสิตของผู้ปกครองคนดังกล่าวจึงได้ทำการปรึกษาเพื่อนในกลุ่มว่าจะสามารถนำความรู้ที่ได้จากการเรียนมาประยุกต์กับเหตุการณ์นี้ได้อย่างไรบ้าง จึงนึกถึงวิชา Embedded ขึ้นมาและได้ทำการปรึกษาหารือวิธีช่วยลดระยะเวลา การดูแลรักษาสวนของผู้ปกครองนิสิตคนนั้น</h4>
+
 ---
 # **Features**
 <center><img src="https://i.ibb.co/Cby7z35/Screen-Shot-2566-03-25-at-14-49-10.png" style="border-radius: 20px; width: 70%;"/img></center>
@@ -95,13 +96,13 @@
 โดยเราจะใช้ระบบไร้สัมผัสในการเปิดประตูโดยจะใช้ servo มาเป็นที่เปิดไม่กั้น ซึ่งสามารถเอามือมา hover รอบ sensor ได้โดยจะใช้ Ultrasonic ในการตรวจสอบว่ามีมือมาบังอยู่รึป่าว และจะใช้ Mini PIR Motion sensor เพื่อตรวจสอบว่าเป็นมือคนจริงๆรึป่าวเพื่อป้องกันการมีวัตถุมาวางขวาง Ultrasonic โดยประตูจะถูกเปิดค้างอย่างน้อย 5 วินาที และการปิดประตูจะมีการตรวจสอบว่ามีวัตถุหรือคนขวางประตูอยู่รึป่าวโดยจะใช้ Laser Emitter และ LDR ในการข่วยตรวจสอบโดยจะตั้งให้ Laser Emitter ส่องตรงไปหา LDR ถ้ามีวัตถุหรือคนขวางอยู่ LDR จะอ่านค่าได้น้อยจะทำให้ประตูยังเปิดค้างไว้อยู่ แต่ถ้าไม่มีวัตถุมาขวาง LDR จะอ่านค่าจาก Laser ได้ตรงและประตูจะปิดทันที
 
 ---
-## **Other Hardware Details**
+**Other Hardware Details**
 
 * โดยในการพัฒนาในส่วนของ Hardware จะใช้ [Arduino IDE](https://www.arduino.cc/en/software) ในการพัฒนา
 * ในการเขียนโค้ดจะใช้ Multitasking มาช่วยในการเพิ่มความเร็วและความง่ายในการพัฒนา
 * มีการใช้ library เพิ่มเติมสำหรับ sensor แต่ละตัว<br>
 
-### **Other Hardware Library**
+**Other Hardware Library**
 1. [DHT11.h](https://github.com/adafruit/DHT-sensor-library)
 2. [MQ2.h](https://github.com/labay11/MQ-2-sensor-library)
 3. [HCSR04.h for Ultrasonic](https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib)
@@ -112,7 +113,7 @@
 8. [LiquidCrystal_I2C.h](https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library)
 9. [ESP32Servo.h](https://www.cybertice.com/article/276/สอนใช้งาน-esp32-es08ma-servo-หมุนแบบ-0-180-องศา)
 
-### **อุปกรณ์ที่ใช้**
+**อุปกรณ์ที่ใช้**
 1. ESP-WROOM-32 x4
 2. [NodeMCU ESP32](https://th.cytron.io/p-nodemcu-esp32) x3
 3. [Breadboard 8.5x5.5cm (400 Holes)](https://th.cytron.io/c-arduino-ecosystem/c-Accessories-for-Arduino/p-breadboard-8.5x5.5cm-400-holes) เยอะมาก
@@ -131,22 +132,22 @@
 16. [HC-SR505 Mini PIR Motion Sensor Module](https://th.cytron.io/p-hc-sr505-mini-pir-motion-sensor-module) x1
 17. [Resistor 10k]<br>
 ---
-###**เครื่องมือที่ใช้ในการพัฒนา**
-###**Frontend**
+**เครื่องมือที่ใช้ในการพัฒนา**
+**Frontend**
 * UX/UI Design: [Figma](https://www.figma.com/file/pU4FR98DjN674zZbek822O/Embedded-Project?node-id=0%3A1&t=Rh7ylBnOWwOw1AC4-1)
 * Frontend Library: ReactJS, Axios, Bootstrap, SweetAlert2
-###**Backend**
+**Backend**
 * database: MongoDB Atlas
 * Framework: NodeJS
 * Library: express, mqtt , cors, dotenv, express-mongo-sanitize, hpp, morgan, xss-clean
 
-###**รายละเอียด Frontend**
+**รายละเอียด Frontend**
 * ใช้ Figma ในการออกแบบ User Interface ทั้งหมด
 * ใช้ ReactJS ในการพัฒนาเว็บไซต์
 * ใช้ Axios ในการทำ HTTP request กับ backend
 * ใช้ Bootstrap Modal ในการทำ Popup แสดงกราฟ และ Popup เพิ่มแปลง
 * ใช้ SweetAlert2 ในการแสดงแจ้งเตือนและแก้ไขข้อมูลเล็กน้อย
-###**รายละเอียด Backend**
+**รายละเอียด Backend**
 * Setup configuration ของ Collection และ Data Model ของ MongoDB
 * ติดต่อกับ Hardware ด้วย MQTT server เพื่อรับข้อมูลลงไปเก็บใน MongoDB Database ด้วย Library Mongoose และสั่งการรดน้ำ
 * ติดต่อกับ Frontend ด้วย HTTP Server เพื่อส่งข้อมูลในการแสดงผล และรับการตั้งค่าการเปิดปิดการใช้งานแต่ละแปลงจาก Frontend
